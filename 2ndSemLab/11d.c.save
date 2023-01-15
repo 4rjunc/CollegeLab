@@ -1,0 +1,25 @@
+// 11.Writeaprogram to print prime numbers wi
+#include<stdio.h>
+int main()
+{
+  inta,b,n-2,flag.j:
+  printf("Enter the range start,end:");
+  scanf("%d%d",&a,&b);
+  for(n-a;n<-b;n++)
+ (
+ }
+    flag-0;
+    for(j=2;j<n/2;j++)
+      if(mj --0)
+   {
+   }
+   {
+      {
+   }
+      }
+    if(flag-0&&n>=2)
+         flag-1;
+      printf("%d\t",n);
+ printf("\n");
+                                         I
+                                                               Pange
