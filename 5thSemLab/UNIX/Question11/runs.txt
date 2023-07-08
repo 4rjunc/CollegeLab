@@ -1,0 +1,11 @@
+SR Tendulkar,INDIA,15921
+RT Ponting,Australia,13378
+JH Kallis,South Africa,13289
+R Dravid,INDIA,13288
+AN Cook,England,12472
+KC Sangakkara,Srilanka,12400
+BC Lara,West Indies,11953
+S Chanderpaul,West Indies,11867
+DPMD Jayawardene,Srilanka,11814
+JE Root,England,11196
+SM Gavaskar,INDIA,10122

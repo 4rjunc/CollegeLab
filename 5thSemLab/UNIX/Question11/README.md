@@ -1,0 +1,1 @@
+Write an AWK program to read an input file containing 3 fields: Name of the player, Country, and Total Runs Scored. Display the names of players from India. Also, print the total runs scored by Indian players.

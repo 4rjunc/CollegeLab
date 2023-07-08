@@ -1,0 +1,6 @@
+echo "Home directory : $HOME"
+echo "Current Shell : $SHELL"
+echo "Operating System Information: $(uname -a)"
+echo "Kernal Information : $(uname -r)"
+echo "Current Working Directory : $PWD"
+echo "Path Variable Contents : $PATH"

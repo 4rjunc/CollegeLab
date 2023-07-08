@@ -1,0 +1,1 @@
+Write an awk program which reads an input file containing marks in 3 subjects of students in a class and display the top scorer in the class.
