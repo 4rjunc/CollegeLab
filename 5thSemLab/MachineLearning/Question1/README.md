@@ -1,0 +1,1 @@
+1. Prepare a dataset of customer having the features date, price, product_id, quantity_purchased, serial_no, user_id,user_type, user_class, purchase_week and visualise the data and Plot diagram for Price Trends for Particular User, Price Trends for Particular User Over Time.
