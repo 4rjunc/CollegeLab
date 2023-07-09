@@ -5,7 +5,7 @@ BEGIN{
 }
 
 $1 ~ /^NA[0-9]{2}PICS[0-9]{2}$/ {
-    total_marks+=$3
+    total_marks += $3
     count++
 }
 

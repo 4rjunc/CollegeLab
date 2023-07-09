@@ -1,10 +1,10 @@
-echo "Printing Current Directory PWD"
+echo "Printing Current Directory pwd"
 pwd
 
-echo '\nHome directory of current user, echo $HOME '
+echo -e "\nHome directory of current user, echo $HOME "
 echo $HOME
 
-echo "\nCurrent GNU/Linux Distribution, lsb_release -d"
+echo -e "\nCurrent GNU/Linux Distribution, lsb_release -d"
 lsb_release -d
 
 echo '\nCurrent Linux Kernal Distribution, uname -r'
