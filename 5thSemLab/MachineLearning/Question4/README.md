@@ -1,0 +1,1 @@
+Write a classification program for implementing SVM using MNIST dataset.
