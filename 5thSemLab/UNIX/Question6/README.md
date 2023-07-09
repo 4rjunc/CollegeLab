@@ -1,0 +1,1 @@
+Write a shell script to display odd natural numbers from 1 to 99 using while and for loop.
