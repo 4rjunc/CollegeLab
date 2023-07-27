@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main{
+    width: 70%;
+    padding-left: 17rem;
+    padding-top: 10px;
+}
+.btn{
+    padding: .4rem 1.2rem;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+}
+fieldset {
+    border: 2px solid #000;
+}
+
+.info{
+    padding: 10px 10px;
+}
