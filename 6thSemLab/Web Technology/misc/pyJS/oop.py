@@ -11,7 +11,10 @@ class Student:
 
     def display(self):
         print(f"Name {self.name}, Department {self.dept}")
-
+    
+    def __del__(self):
+        class_name = self.__class__.__name__
+        print(class_name, "destroyed!")
 stud = Student("Amal", "CS")
 stud.total_student()
 stud.display()
@@ -23,3 +26,5 @@ print(delattr(stud, "dept"))
 print(hasattr(stud, "dept"))
 setattr(stud, "name", "sibi")
 print(getattr(stud, "name"))
+del stud
+
