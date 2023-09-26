@@ -1,3 +1,5 @@
+from pprint import pprint
+
 A = {
     "a":0.2,
     "b":0.5,
@@ -19,4 +21,4 @@ for (key1,value1), (key2, value2) in zip(A.items(),B.items()):
     elif value2 > value1:
         Z[key1] = value2
         
-print(f"{A} \n UNION \n{B}\n=\n{Z}")
+pprint(f"{A}  UNION {B} = {Z}")
