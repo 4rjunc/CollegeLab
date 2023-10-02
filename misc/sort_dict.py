@@ -5,3 +5,4 @@ dict = {"b": 4, "a": 6, "r": 1, "e": 10}
 sorted_tuple = sorted(dict.items(), key=lambda x: x[1])
 sorted_dict = {item[0]: item[1] for item in sorted_tuple}
 print(f"{sorted_dict=}")
+
