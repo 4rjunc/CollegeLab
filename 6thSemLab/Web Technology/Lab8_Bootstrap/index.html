@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Simple Bootstrap Web Page</title>
+</head>
+
+<body>
+    <a class="navbar-brand" href="#"><img src="nascnew23.png"></a><br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" onclick="showContent('home')">Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showContent('About')">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showContent('Departments')">Departments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showContent('Contact')">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="home" class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Nehru Arts and Science College</h1>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">History</h5>
+                <p class="card-text">Early in 1964, the enlightened public of Kanhangad and Nileshwar resolved to honour
+                    the memory of Jawaharlal Nehru, the architect of modern India by undertaking educational and
+                    cultural activities in this educationally backward area. In pursuit of this idea, a dedicated and
+                    learned team set up in 1966, an educational society known as "The Nehru Memorial Education Society"
+                    under the distinguished presidentship of the late Shri. C. K. Nair following which the society was
+                    duly registered. The establishment of Nehru Arts & Science College, Kanhangad in this backward
+                    coastal tract was the major task the society had set before themselves and had subsequently
+                    accomplished it.</p>
+            </div>
+        </div>
+    </div>
+    <div id="About" class="container mt-4" style="display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Vision</h5>
+                <p class="card-text">Education for all and for all-round development</p>
+                <h5 class="card-title">Mission</h5>
+                <p class="card-text">
+                <ul>
+                    <li>To keep the facilities for higher education open to all irrespective of caste, religion, sex and
+                        economic status and thereby strengthen the knowledge base of the society.
+                    <li>To help develop the spirit of patriotism and secularism among the students.</li>
+                    <li>To preserve the ethnic values and cultural heritage of this locality with special accent on its
+                        linguistic forms and folklore. </li>
+                    <li>To conduct programmes and projects highlighting the challenges and trials faced by the society,
+                        to make the students alert to the threats of communalism, social fragmentation, exploitation and
+                        erosion of values.</li>
+                    <li>To stimulate interaction of the student community and the society through programmes of specific
+                        social benefit.</li>
+                    
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="Departments" class="container mt-4" style="display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Departments</h5>
+                <p>
+                <ul>
+                    <li>Botany</li>
+                    <li>Chemistry</li>
+                    <li>Commerce</li>
+                    <li>Computer Science</li>
+                    <li>Economics</li>
+                    <li>English</li>
+                    <li>Botany</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="Contact" class="container mt-4" style="display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Contact Us</h5>
+                <p> P.O. Padnekkat<br>
+                    Kasaragod (Dist.)<br>
+                    Kerala - 671314<br>
+                    India<br>
+                    +91-467 2280335<br> nascollegekanhangad@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript function to show the selected content and hide others 
+        function showContent(sectionId){
+            document.querySelectorAll(".container").forEach(function (section){
+                section.style.display = "none";
+            })
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+    <!-- Content Sections -->
+</body>
+
+</html>
