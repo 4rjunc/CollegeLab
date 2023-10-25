@@ -25,20 +25,18 @@
     <div id="container"><img src="./car.png" alt="car" id="car" /></div>
   </body>
   <script>
-    (function (selector) {
-      console.log("Hello");
-      let pos_start = 0;
-      let pos_end =
-        document.querySelector("#container").getBoundingClientRect().width -
-        100;
-      let interval = setInterval(function () {
-        if (selector.offsetLeft >= pos_end) {
-          pos_start = 0;
-        } else {
-          pos_start++;
+    (function (selector){
+     let start_pos = 2
+     let end_pos = document.querySelector("#container").getBoundingClientRect().width - 100
+     let interval = setInterval(function(){
+        if(selector.offsetLeft >= end_pos){
+            start_pos = 2;
         }
-        selector.style = `left: ${pos_start}px`;
-      }, 10);
-    })(document.querySelector("#car"));
+        else{
+            start_pos++;
+        }
+        selector.style = `left: ${start_pos}px`
+     },10)   
+    })(document.querySelector("#car"))
   </script>
 </html>
