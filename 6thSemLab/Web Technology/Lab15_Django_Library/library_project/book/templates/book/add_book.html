@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+</head>
+<div name="add" style="background-color:#007BFF">
+<h1>Books</h1>
+</div>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit"/>
+</from>
+</html>

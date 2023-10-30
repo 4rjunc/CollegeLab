@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      #container {
+        width: 100%;
+        height: 550px;
+        border: 1px solid #000;
+        position: relative;
+      }
+
+      #car {
+        position: absolute;
+        width: 500px;
+        bottom: 100px;
+        left: 0px;
+        opacity: 20;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"><img src="./car.png" alt="car" id="car" /></div>
+  </body>
+  <script>
+    (function (selector){
+     let start_pos = 2
+     let end_pos = document.querySelector("#container").getBoundingClientRect().width - 100
+     let interval = setInterval(function(){
+        if(selector.offsetLeft >= end_pos){
+            start_pos = 2;
+        }
+        else{
+            start_pos++;
+        }
+        selector.style = `left: ${start_pos}px`
+     },10)   
+    })(document.querySelector("#car"))
+  </script>
+</html>

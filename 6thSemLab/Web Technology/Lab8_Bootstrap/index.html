@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Simple Bootstrap Web Page</title>
+</head>
+
+<body>
+    <a href="#" class="navbar-brand"><img src="./nascnew23.png" alt="college"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a href="#" onclick="showContent('home')" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" onclick="showContent('department')" class="nav-link">Department</a></li>
+            <li class="nav-item"><a href="#" onclick="showContent('about')" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" onclick="showContent('contact')" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="container">
+        <div class="jumbotron">
+            <h4>Welcome Nehru Arts and Science College, Kanhangad</h4>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">History</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facilis repudiandae veniam
+                    consectetur non inventore voluptate reiciendis doloribus modi quia. Laboriosam aspernatur sint aut
+                    ea.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="department" class="container" style="display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Departments</h5>
+                <p class="card-text">
+                <ol>
+                    <li>Lorem, ipsum.</li>
+                    <li>Quibusdam, magni.</li>
+                    <li>Optio, inventore!</li>
+                    <li>Rerum, reprehenderit?</li>
+                    <li>Optio, rerum.</li>
+                    <li>Quod, a?</li>
+                    <li>Sed, nisi?</li>
+                    <li>Tempora, quidem?</li>
+                    <li>Consequatur, cum.</li>
+                    <li>Veniam, cupiditate?</li>
+                </ol>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="container" style="display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Vision</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voluptatem.</p>
+                <h5 class="card-title">Mission</h5>
+                <p class="card-text">
+                <ul>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam illum corrupti, magni tempore
+                        modi velit expedita nisi incidunt!</li>
+                    <li>Mollitia esse explicabo praesentium. Unde explicabo, officia magni pariatur eos nemo provident
+                        inventore iure nobis, eaque, aliquam ipsum.</li>
+                    <li>Illum sit repudiandae sequi? Veniam reprehenderit temporibus ut impedit, delectus molestias amet
+                        ipsa doloremque animi nobis in commodi?</li>
+                    <li>Earum officia expedita quaerat est? Iste, amet sapiente voluptatem aspernatur eligendi
+                        architecto consectetur sit culpa nulla praesentium est.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="container" style="display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-tile">Contact Us</h5>
+                <p class="card-body"> P.O. Padnekkat<br>
+                    Kasaragod (Dist.)<br>
+                    Kerala - 671314<br>
+                    India<br>
+                    +91-467 2280335<br> nascollegekanhangad@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showContent(sectionID) {
+        document.querySelectorAll(".container").forEach((section) => {
+            section.style.display = "none"
+        })
+        document.getElementById(sectionID).style.display = "block"
+    }
+</script>
+
+</html>

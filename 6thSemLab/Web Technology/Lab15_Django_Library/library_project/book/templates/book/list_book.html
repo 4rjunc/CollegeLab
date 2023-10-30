@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book List</title>
+  </head>
+  <body>
+    <div name="list" style="background-color: #007bff"><h1>Book List</h1></div>
+    <table border="1">
+      <tr>
+        <th>Title</th>
+        <th>Author:</th>
+        <th>Shelf No</th>
+      </tr>
+      {% for book in books %}
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.shelf_no }}</td>
+      </tr>
+      {% empty %} No books available {% endfor %}
+    </table>
+  </body>
+</html>

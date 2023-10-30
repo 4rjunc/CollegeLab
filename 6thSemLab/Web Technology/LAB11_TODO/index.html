@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+      body {
+        background: #e5e8d8;
+      }
+      #newtask {
+        position: relative;
+        padding: 30px 20%;
+      }
+      #newtask input {
+        width: 75%;
+        height: 45px;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        border: 2px solid #d1d3d4;
+        color: #111111;
+        align-self: center;
+        position: relative;
+        border-radius: 5px;
+      }
+      #newtask button {
+        position: relative;
+        width: 10%;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #0d75ec;
+        color: #ffffff;
+        cursor: pointer;
+        padding: .2rem .4rem;
+      }
+      #tasks {
+        background-color: #e5e8d8;
+        padding: 30px 20px;
+        border-radius: 10px;
+        position: relative;
+      }
+      .task {
+        background-color: #c5e1e6;
+        height: 50px;
+        padding: 5px 10px;
+        display: flex;
+        border-radius: 5px;
+        justify-content: space-between;
+        border: 1px solid #939697;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+      }
+      .delete {
+        background-color: #0a2ea4;
+        color: #ffffff;
+        width: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <center><h2>TODO LIST</h2></center>
+      <div id="newtask">
+        <input id="todo" type="text" placeholder="Enter a task" />
+        <input type="button" onclick="push()" value="Add" />
+      </div>
+    </div>
+    <div id="tasks"></div>
+  </body>
+  <script>
+    function push() {
+      if (document.getElementById("todo").value.length == 0) {
+        alert("Please Enter A Task");
+      } else {
+        document.querySelector("#tasks").innerHTML += `
+            <div class="task">
+                <span id="taskname">${
+                  document.getElementById("todo").value
+                }</span>    
+            
+            <button class="delete">
+                Delete!
+            </button>
+        </div>
+            `;
+        var currentTasks = document.querySelectorAll(".delete");
+        for (var i = 0; i < currentTasks.length; i++) {
+          currentTasks[i].onclick = function () {
+            console.log("Hello");
+            this.parentNode.remove();
+          };
+        }
+      }
+    }
+  </script>
+</html>

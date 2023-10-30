@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    } p{
+    text-align: justify-content;font-family: "arial", Tahoma, Geneva, Verdana, sans-serif; }
+    body {
+    font-family: "arial black", Tahoma, Geneva, Verdana, sans-serif; background-color: antiquewhite;
+    }
+    .container { padding: 40px 5%;
+    }
+    .heading {
+    background-color: rgb(175, 199, 243); }
+    .heading-text {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(175, 199, 243);
+    }
+    .heading-text span { font-weight: 100;
+    } #caption{
+    background-image: url("https://myholidayhappiness.com/uploads/b4e192a8643b300a1a4c968fc25b0307.jpg");
+    color:brown ;
+    height: 300px;
+    width: 100%; background-repeat: no-repeat; align-items: center;
+    }
+    ul {
+    list-style:none;
+ }
+    .content{
+        font-size: large;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /* Responsive image gallery rules begin*/
+        .image-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+        }
+        .image-gallery > li {
+        flex-basis: 300px; position: relative; cursor: pointer;
+        }
+        .image-gallery::after {
+        content: "";
+        flex-basis: 300px; }
+        .image-gallery li img { object-fit: cover; max-width: 100%; height: 100%; vertical-align: middle; border-radius: 5px;
+        }
+        .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(121, 113, 113, 0.502); top: 0;
+        left: 0;
+        transform: scale(0);
+        transition: all 0.2s 0.1s ease-in-out; color: #fff;
+        border-radius: 5px;/* center overlay text */ display: flex; align-items: center; justify-content: center;
+    }
+    /* hover */
+    .image-gallery li:hover.overlay {
+    transform:scale(1);
+ }
