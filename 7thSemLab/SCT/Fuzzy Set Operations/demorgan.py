@@ -1,14 +1,4 @@
-# from pprint import pprint
-
-# for (key1,value1), (key2, value2) in zip(A.items(),B.items()):
-#     # print(f"{key1=}, {value1=}, {key2=}, {value2=}")
-#     if value1> value2:
-#         Z[key1] = value1
-#     elif value2 > value1:
-#         Z[key1] = value2
-
 Z = {}
-
 
 def union(A, B):
     for x in A and B:
@@ -27,6 +17,7 @@ def compliment(X):
         Z[x] = round(1 - X[x],2)
     return Z
 
+input("Program to prove DeMorgans Theorem!")
 
 A = {}
 B = {}
@@ -39,8 +30,9 @@ for _ in range(no_items):
     value = float(input("Enter the Membership value for Set 2: "))
     B[key] = value
 
+LHS = compliment(union(A, B))
+RHS = union(compliment(A), compliment(B))
 
-print(f"{A=} UNION {B=} Is {union(A,B)}")
-print(f"{A=} Intersection {B=} Is {intersection(A,B)}")
-print(f"COMPLIMENT OF {A=} IS {compliment(A)}")
-print(f"COMPLIMENT OF {B=} IS {compliment(B)}")
+print(f"Fuzzy sets given {A=} and {B=}")
+if LHS == RHS:
+    print(f"DeMorgans is proved \n Since {LHS} = {RHS}")
