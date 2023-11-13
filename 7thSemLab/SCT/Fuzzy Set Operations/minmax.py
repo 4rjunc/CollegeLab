@@ -1,17 +1,20 @@
-def min_max_composition(R, S):
-    result = set()
-    for (a, b) in R:
-        max_val = float('-inf')  # Initializing with negative infinity
-        for (c, d) in S:
-            if b == c:
-                max_val = max(max_val, max(a, d))
-        if max_val != float('-inf'):
-            result.add((a, max_val))
+import numpy as np
+
+def max_min_composition(R, S):
+    result = np.zeros((R.shape[0], S.shape[1]))
+
+    for i in range(R.shape[0]):
+        for j in range(S.shape[1]):
+            max_min = -np.inf
+            for k in range(R.shape[1]):
+                max_min = max(max_min, min(R[i, k], S[k, j]))
+            result[i, j] = max_min
+
     return result
 
-# Example relation sets R and S
-R = {(1, 2), (3, 4), (5, 6)}
-S = {(2, 1), (4, 3)}
+R = np.array([[0.7, 0.6], [0.8, 0.3]]) 
+S = np.array([[0.8, 0.1, 0.4], [0.5, 0.6, 0.7]])  
 
-print(f"Max-Min Composition {R=} and {S=}")
-print(min_max_composition(R, S))
+result = max_min_composition(R, S)
+print("Result of Max-min Composition:")
+print(result)
