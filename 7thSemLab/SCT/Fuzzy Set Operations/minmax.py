@@ -5,7 +5,7 @@ def max_min_composition(R, S):
 
     for i in range(R.shape[0]):
         for j in range(S.shape[1]):
-            max_min = -np.inf
+            max_min = 0
             for k in range(R.shape[1]):
                 max_min = max(max_min, min(R[i, k], S[k, j]))
             result[i, j] = max_min
