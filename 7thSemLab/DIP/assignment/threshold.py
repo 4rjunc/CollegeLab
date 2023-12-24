@@ -11,7 +11,7 @@ def threshold_image(input_path, output_path, threshold):
     binary_img.save(output_path)
 
 # Example usage
-input_image_path = 'grayscale_image.jpg'
+input_image_path = 'flower.jpg'
 output_binary_path = 'binary_image.jpg'
 
 # Specify the threshold value (adjust as needed)
