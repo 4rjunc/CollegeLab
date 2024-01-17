@@ -5,10 +5,12 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        elements = []
-        for x in nums:
-            if countOf(nums, x) >= k:
-                if x not in elements:
-                    elements.append(x)
+        num_counts = {}
+        for num in nums:
+            num_counts[num] = num_counts.get(num, 0) + 1
 
-        return elements
+        # Sort the numbers based on their frequencies in descending order
+        sorted_nums = sorted(num_counts.keys(), key=lambda x: num_counts[x], reverse=True)
+
+        # Return the first k elements from the sorted list
+        return sorted_nums[:k]
