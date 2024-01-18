@@ -7,3 +7,5 @@ print(f"Odd numbers {odd_number}")
 fruits = ["apple", "banana", "cherry", "date"]
 fruits_dict = {fruit : len(fruit) for fruit in fruits}
 print(fruits_dict)
+
+#test with out git config
