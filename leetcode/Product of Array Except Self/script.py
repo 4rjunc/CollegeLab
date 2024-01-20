@@ -4,12 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        answer = []
-        ans = 1
-        for i in range(len(nums)):
-            for num in nums : 
-                if nums[i] != num:
-                    ans = ans * num
-            answer.append(ans)
-            ans = 1
-        return answer
+        ans = []
+        for i, num in enumerate(nums):
+            result = 1 
+            for x in nums:
+                if nums[i] != x :
+                    result *= x
+            ans.append(result)
+        return ans
