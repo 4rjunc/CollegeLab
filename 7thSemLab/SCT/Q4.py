@@ -1,16 +1,20 @@
 Z = {}
 
+
 def union(A, B):
     for x in A and B:
         Z[x] = max(A[x], B[x])
     return Z
 
+
 def compliment(X):
     for x in X:
-        Z[x] = round(1 - X[x],2)
+        Z[x] = round(1 - X[x], 2)
     return Z
 
+
 input("Program to prove DeMorgans Theorem!")
+
 
 def get_membership_value(key):
     while True:
@@ -20,6 +24,7 @@ def get_membership_value(key):
         else:
             print("Invalid input. Please enter a value between 0 and 1.")
 
+
 A = {}
 B = {}
 
@@ -27,7 +32,7 @@ no_items = int(input("Enter the numbers: "))
 for _ in range(no_items):
     key = input("Enter the crispy set elements: ")
     value = get_membership_value(key)
-    A[key] = value    
+    A[key] = value
     value = get_membership_value(key)
     B[key] = value
 

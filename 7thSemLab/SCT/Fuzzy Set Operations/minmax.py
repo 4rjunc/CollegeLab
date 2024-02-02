@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def max_min_composition(R, S):
     result = np.zeros((R.shape[0], S.shape[1]))
 
@@ -12,8 +13,9 @@ def max_min_composition(R, S):
 
     return result
 
-R = np.array([[0.7, 0.6], [0.8, 0.3]]) 
-S = np.array([[0.8, 0.1, 0.4], [0.5, 0.6, 0.7]])  
+
+R = np.array([[0.7, 0.6], [0.8, 0.3]])
+S = np.array([[0.8, 0.1, 0.4], [0.5, 0.6, 0.7]])
 
 result = max_min_composition(R, S)
 print("Result of Max-min Composition:")

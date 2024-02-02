@@ -1,19 +1,23 @@
 Z = {}
 
+
 def union(A, B):
     for x in A and B:
         Z[x] = max(A[x], B[x])
     return Z
+
 
 def intersection(A, B):
     for x in A and B:
         Z[x] = min(A[x], B[x])
     return Z
 
+
 def compliment(X):
     for x in X:
-        Z[x] = round(1 - X[x],2)
+        Z[x] = round(1 - X[x], 2)
     return Z
+
 
 def get_membership_value(key):
     while True:
