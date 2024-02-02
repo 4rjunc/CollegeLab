@@ -20,10 +20,7 @@ def genetic_algorithm(population_size, generations):
         fitness_scores = [fitness_function(x) for x in population]
 
         parents = [population[i] for i in range(population_size) if random.random() < fitness_scores[i]/sum(fitness_scores)]
-
-
         next_generation = []
-
         while len(next_generation) < population_size:
             parent1 = random.choice(parents)
             parent2 = random.choice(parents)
