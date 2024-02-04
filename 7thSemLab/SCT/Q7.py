@@ -25,7 +25,7 @@ def genetic_algoritm(target, population_size, generations, mutation_rate):
     for generation in range(generations):
         population = sorted(population, key=lambda x : fitness(x,target), reverse=True)
         if fitness(population[0],target) == len(target):
-            print(f"Individual Found at generation {generation + 1}")
+            print(f"Target reached in generation {generation + 1}")
             break
         
         new_population = population[:2]
@@ -35,9 +35,10 @@ def genetic_algoritm(target, population_size, generations, mutation_rate):
             child1, child2 = crossover(parent1, parent2)
             child1 = mutation(child1, mutation_rate)
             child2 = mutation(child2, mutation_rate)
-
             new_population.extend([child1, child2])
-        
+
+        population = new_population
+
     best_individual = max(new_population, key=lambda x : fitness(x, target))
     print(f"Best Individual : {best_individual}\nFitness : {fitness(best_individual,target)}")
 
