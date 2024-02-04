@@ -19,7 +19,7 @@ model = tf.keras.Sequential(
 model.compile(optimizer="adam", loss="mean_squared_error", metrics=["accuracy"])
 
 # Train the model on XOR data
-model.fit(X, y, epochs=10000, verbose=0)
+model.fit(X, y, epochs=100  , verbose=0)
 
 # Evaluate the model on XOR data
 predictions = model.predict(X)

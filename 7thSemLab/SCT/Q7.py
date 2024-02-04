@@ -27,7 +27,6 @@ def genetic_algoritm(target, population_size, generations, mutation_rate):
         if fitness(population[0],target) == len(target):
             print(f"Target reached in generation {generation + 1}")
             break
-        
         new_population = population[:2]
 
         while len(new_population) < population_size:
@@ -44,4 +43,4 @@ def genetic_algoritm(target, population_size, generations, mutation_rate):
 
 if __name__ == "__main__":
     target = "1010101010101010"
-    genetic_algoritm(target, population_size=100, generations=1000, mutation_rate=0.1)
+    genetic_algoritm(target, population_size=100, generations=1000, mutation_rate=0.3)
