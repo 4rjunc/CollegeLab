@@ -12,6 +12,11 @@ population = np.random.uniform(-10,10, size=population_size)
 
 for generation in range(generations):
     fitness = objective_function(population)
+
+    #check these two lines 
+    #sorted_indices = np.argsort(fitness)[::-1]
+    #selected_population = population[sorted_indices[:population_size]]
+    
     selected_population = sorted(population, reverse=True)
     crossover_population = np.random.choice(selected_population, size=population_size) #crossover
     mutation_mask = np.random.rand(population_size) < mutation_rate #setting up mutation
